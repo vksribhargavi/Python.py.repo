@@ -229,145 +229,6 @@ for group in groups:
 print(result)'''
 
 
-# import module_name
-# print(module_name.function_name(example_inputs))   # Expected Output
-
-###########MATH#################
-import math
-
-print(math.ceil(4.2))                         # 5
-print(math.comb(5, 2))                        # 10
-print(math.copysign(5, -3))                   # -5.0
-print(math.dist([0, 0], [3, 4]))             # 5.0
-print(math.erf(1))                            # 0.8427007929497149
-print(math.erfc(1))                           # 0.15729920705028513
-print(math.exp(2))                            # 7.38905609893065
-print(math.expm1(2))                          # 6.38905609893065
-print(math.fabs(-10.5))                       # 10.5
-print(math.factorial(5))                      # 120
-print(math.floor(4.8))                        # 4
-print(math.fmod(10, 3))                       # 1.0
-print(math.frexp(8))                          # (0.5, 4)
-print(math.fsum([0.1, 0.2, 0.3]))             # 0.6
-print(math.gamma(5))                          # 24.0
-print(math.gcd(12, 18))                       # 6
-print(math.hypot(3, 4))                       # 5.0
-print(math.isclose(0.1 + 0.2, 0.3))           # True
-print(math.isfinite(100))                     # True
-print(math.isinf(math.inf))                   # True
-print(math.isnan(math.nan))                   # True
-print(math.isqrt(10))                         # 3
-print(math.lcm(12, 18))                       # 36
-print(math.ldexp(0.5, 4))                     # 8.0
-print(math.lgamma(5))                         # 3.178053830347945
-print(math.log(8, 2))                         # 3.0
-print(math.log10(1000))                       # 3.0
-print(math.log1p(1))                          # 0.6931471805599453
-print(math.log2(8))                           # 3.0
-print(math.modf(3.75))                        # (0.75, 3.0)
-print(math.nextafter(1.0, 2.0))               # 1.0000000000000002
-print(math.perm(5, 2))                        # 20
-print(math.pow(2, 3))                         # 8.0
-print(math.prod([2, 3, 4]))                   # 24
-print(math.radians(180))                      # 3.141592653589793
-print(math.degrees(math.pi))                  # 180.0
-print(math.remainder(10, 3))                  # 1.0
-print(math.sin(math.radians(90)))             # 1.0
-print(math.cos(math.radians(0)))              # 1.0
-print(math.tan(math.radians(45)))             # 0.9999999999999999
-print(math.asin(1))                           # 1.5707963267948966
-print(math.acos(1))                           # 0.0
-print(math.atan(1))                           # 0.7853981633974483
-print(math.atan2(1, 1))                       # 0.7853981633974483
-print(math.sinh(1))                           # 1.1752011936438014
-print(math.cosh(1))                           # 1.5430806348152437
-print(math.tanh(1))                           # 0.7615941559557649
-print(math.asinh(1))                          # 0.881373587019543
-print(math.acosh(2))                          # 1.3169578969248166
-print(math.atanh(0.5))                        # 0.5493061443340548
-print(math.sqrt(144))                         # 12.0
-print(math.trunc(4.9))                        # 4
-print(math.ulp(1.0))                          # 2.220446049250313e-16
-
-
-###########RANDOM#################
-'''import random
-
-print(random.random())                        # Random float between 0.0 and 1.0
-print(random.randint(1, 10))                  # Random integer between 1 and 10
-print(random.randrange(1, 20, 2))             # Random odd number between 1 and 19
-print(random.uniform(1.5, 5.5))               # Random float between 1.5 and 5.5
-print(random.choice(["Red", "Blue", "Green"])) # Random item from the list
-
-numbers = [1, 2, 3, 4, 5]
-
-random.shuffle(numbers)
-print(numbers)                                # Shuffled list
-
-print(random.sample([10, 20, 30, 40, 50], 3)) # Random 3 unique items
-print(random.choices(["A", "B", "C"], k=5))   # Random 5 items with replacement
-
-print(random.getrandbits(4))                  # Random 4-bit integer
-
-print(random.triangular(1, 10, 5))            # Random float using triangular distribution
-print(random.betavariate(2, 5))               # Random float using beta distribution
-print(random.expovariate(1.5))                # Random float using exponential distribution
-print(random.gammavariate(2, 3))              # Random float using gamma distribution
-print(random.gauss(0, 1))                     # Random float using Gaussian distribution
-print(random.lognormvariate(0, 1))            # Random float using log-normal distribution
-print(random.normalvariate(0, 1))             # Random float using normal distribution
-print(random.paretovariate(3))                # Random float using Pareto distribution
-print(random.vonmisesvariate(0, 1))           # Random float using Von Mises distribution
-print(random.weibullvariate(1, 2))            # Random float using Weibull distribution
-
-random.seed(10)
-print(random.randint(1, 100))                 # Same random result every time with same seed
-
-
-###########DATETIME#################
-python
-import datetime
-
-print(datetime.date.today())                              # Current date
-print(datetime.datetime.now())                            # Current date and time
-print(datetime.datetime.utcnow())                         # Current UTC date and time
-print(datetime.time(14, 30, 45))                          # 14:30:45
-print(datetime.date(2026, 5, 16))                         # 2026-05-16
-print(datetime.datetime(2026, 5, 16, 10, 30, 0))         # 2026-05-16 10:30:00
-print(datetime.timedelta(days=5))                         # 5 days, 0:00:00
-print(datetime.timedelta(hours=2, minutes=30))            # 2:30:00
-
-print(datetime.date.today().year)                         # Current year
-print(datetime.date.today().month)                        # Current month
-print(datetime.date.today().day)                          # Current day
-
-print(datetime.datetime.now().hour)                       # Current hour
-print(datetime.datetime.now().minute)                     # Current minute
-print(datetime.datetime.now().second)                     # Current second
-
-print(datetime.datetime.now().strftime("%Y-%m-%d"))       # Formatted date
-print(datetime.datetime.now().strftime("%d/%m/%Y"))       # Formatted date as DD/MM/YYYY
-print(datetime.datetime.now().strftime("%I:%M %p"))       # Formatted time (12-hour)
-
-print(datetime.datetime.strptime("2026-05-16", "%Y-%m-%d"))  # Convert string to datetime
-
-print(datetime.date.today() + datetime.timedelta(days=7))    # Date after 7 days
-print(datetime.date.today() - datetime.timedelta(days=7))    # Date before 7 days
-
-print(datetime.datetime.now().weekday())                 # Day of week (Monday = 0)
-print(datetime.datetime.now().isoweekday())              # Day of week (Monday = 1)
-print(datetime.date.today().isoformat())                 # Date in ISO format
-print(datetime.datetime.now().timestamp())               # Unix timestamp
-
-print(datetime.datetime.min)                             # Minimum supported datetime
-print(datetime.datetime.max)                             # Maximum supported datetime
-print(datetime.date.min)                                 # Minimum supported date
-print(datetime.date.max)                                 # Maximum supported date
-print(datetime.time.min)                                 # 00:00:00
-print(datetime.time.max)                                 # 23:59:59.999999
-
-
-
 ##########TIME#################
 import time
 
@@ -722,86 +583,46 @@ print(operator.is_(None, None))              # True
 print(operator.is_not(10, 20))               # True
 
 
-###########PATHLIB#################
-from pathlib import Path
-
-print(Path("sample.txt"))                           # sample.txt
-print(Path.cwd())                                   # Current working directory
-print(Path.home())                                  # User home directory
-
-print(Path("sample.txt").name)                      # sample.txt
-print(Path("sample.txt").stem)                      # sample
-print(Path("sample.txt").suffix)                    # .txt
-print(Path("sample.txt").suffixes)                  # ['.txt']
-print(Path("folder/sample.txt").parent)             # folder
-
-print(Path("folder") / "sample.txt")                # folder/sample.txt
-print(Path("folder/sample.txt").parts)              # ('folder', 'sample.txt')
-
-print(Path("sample.txt").exists())                  # True if file exists
-print(Path("sample.txt").is_file())                 # True if it is a file
-print(Path("my_folder").is_dir())                   # True if it is a directory
-
-print(Path("sample.txt").absolute())                # Absolute path
-print(Path("sample.txt").resolve())                 # Resolved absolute path
-
-print(Path("sample.txt").with_name("new.txt"))      # new.txt
-print(Path("sample.txt").with_suffix(".csv"))       # sample.csv
-
-print(Path("folder/sample.txt").relative_to("folder"))  # sample.txt
-
-print(list(Path(".").iterdir()))                    # Items in current directory
-print(list(Path(".").glob("*.txt")))                # All .txt files
-print(list(Path(".").rglob("*.py")))                # All .py files recursively
-
-print(Path("sample.txt").read_text())               # Read file content
-print(Path("sample.txt").read_bytes())              # Read file as bytes
-
-print(Path("output.txt").write_text("Hello"))       # Number of characters written
-print(Path("output.bin").write_bytes(b"ABC"))       # Number of bytes written
-
-print(Path("new_folder").mkdir(exist_ok=True))      # Create directory
-print(Path("output.txt").rename("renamed.txt"))     # Rename file
-print(Path("renamed.txt").unlink())                 # Delete file
-print(Path("new_folder").rmdir())                   # Remove empty directory
-
-print(Path("sample.txt").stat())                    # File information
-print(Path("sample.txt").touch())                   # Create file if it does not exist
-
-
-
-###########COPY#################
-
-import copy
-
-print(copy.copy([1, 2, 3]))                  # [1, 2, 3]
-print(copy.deepcopy([[1, 2], [3, 4]]))       # [[1, 2], [3, 4]]
-
-original = [1, 2, 3]
-print(copy.copy(original))                   # [1, 2, 3]
-
-nested = [[1, 2], [3, 4]]
-print(copy.deepcopy(nested))                 # [[1, 2], [3, 4]]
-
-person = {"name": "Rajesh", "age": 30}
-print(copy.copy(person))                     # {'name': 'Rajesh', 'age': 30}
-
-employee = {
-    "name": "Rajesh",
-    "skills": ["Python", "Revit API"]
-}
-print(copy.deepcopy(employee))               # {'name': 'Rajesh', 'skills': ['Python', 'Revit API']}
-
-number = 100
-print(copy.copy(number))                     # 100
-
-text = "Hello Python"
-print(copy.copy(text))                       # Hello Python
-
-tuple_data = (1, 2, 3)
-print(copy.copy(tuple_data))                 # (1, 2, 3)
-
-set_data = {10, 20, 30}
-print(copy.copy(set_data))                   # {10, 20, 30}
 
 '''
+'''
+'''import random
+area=random.randint(50,250)
+print(area)
+if area > 200:
+    print("35 people are in the plot")
+elif area>150:
+    print("25 people are in the plot")
+else:
+    print("8 people are in plot")'''
+
+'''for i in range(2,15,4):
+   print(i)'''
+
+'''n = 2
+n1 = (n*n+2)
+n2 = (n*n1-2)
+n3 = (n2+2)
+print(n)
+print(n1)
+print(n2)
+print(n3)'''
+
+'''i = 1
+while i <= 100:
+    print(i)
+    i += 4.5'''
+'''
+import random
+size = int(input())
+members = random.sample([1,2,3,4,5,6,7,8,9,10], 4)
+for i in range(10):
+    print(members)'''
+ 
+'''import random
+i=0
+while i<11:
+    l=random.randint(1,20)
+    b=random.randint(1,20)
+    print(l,b,l,b)
+    i+=1   ''''''
