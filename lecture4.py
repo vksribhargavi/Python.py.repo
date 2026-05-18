@@ -131,7 +131,7 @@ set_data = {10, 20, 30}
 print(copy.copy(set_data)) # Creates a shallow copy of the set.'''
 
 
-import time
+'''import time
 # Current Unix timestamp
 print(time.time())     
 # Current date and time as a string                       
@@ -181,37 +181,74 @@ print(time.timezone)       # Offset from UTC in seconds
 print(time.altzone)        # DST offset from UTC in seconds
 print(time.daylight)      # 1 if DST is defined, else 0
 print(time.sleep(1)) # Pauses execution for 1 second (returns None)
+'''
 
 
 from pathlib import Path
-print(Path("sample.txt"))# Creates a path object for the file "sample.txt".
-print(Path.cwd())# Returns the current working directory.
-print(Path.home())# Returns the user's home directory.
-print(Path("sample.txt").name)# Returns the file name.
-print(Path("sample.txt").stem)# Returns the file name without extension.
-print(Path("sample.txt").suffix)# Returns the file extension.
-print(Path("sample.txt").suffixes)# Returns all suffixes/extensions as a list.
-print(Path("folder/sample.txt").parent)# Returns the parent folder of the file.
-print(Path("folder") / "sample.txt")# Joins folder and file path using / operator.
-print(Path("folder/sample.txt").parts)# Returns path parts as a tuple.
-print(Path("sample.txt").exists())# Checks whether the file exists.
-print(Path("sample.txt").is_file())# Checks whether the path is a file.
-print(Path("my_folder").is_dir())# Checks whether the path is a directory.
-print(Path("sample.txt").absolute())# Returns the absolute path.
-print(Path("sample.txt").resolve())# Returns the resolved absolute path.
-print(Path("sample.txt").with_name("new.txt"))# Changes the file name.
-print(Path("sample.txt").with_suffix(".csv"))# Changes the file extension.
-print(Path("folder/sample.txt").relative_to("folder"))# Returns the relative path from the given folder.
-print(list(Path(".").iterdir()))# Lists all items in the current directory.
-print(list(Path(".").glob("*.txt")))# Finds all .txt files in the current directory.
-print(list(Path(".").rglob("*.py")))# Finds all .py files recursively.
-print(Path("sample.txt").read_text())# Reads file content as text.
-print(Path("sample.txt").read_bytes())# Reads file content as bytes.
-print(Path("output.txt").write_text("Hello"))# Writes text into a file.
-print(Path("output.bin").write_bytes(b"ABC"))# Writes bytes into a binary file.
-print(Path("new_folder").mkdir(exist_ok=True))# Creates a new directory.
-print(Path("output.txt").rename("renamed.txt"))# Renames the file.
-print(Path("renamed.txt").unlink())# Deletes the file.
-print(Path("new_folder").rmdir())# Removes an empty directory.
-print(Path("sample.txt").stat())# Returns file information like size and timestamps.
-print(Path("sample.txt").touch())# Creates the file if it does not exist.
+print(Path("sample.txt"))  
+# Creates a path object for the file "sample.txt".
+print(Path.cwd())  
+# Returns the current working directory.
+print(Path.home())  
+# Returns the user's home directory.
+print(Path("sample.txt").name)  
+# Returns the file name.
+print(Path("sample.txt").stem)  
+# Returns the file name without extension.
+print(Path("sample.txt").suffix)  
+# Returns the file extension.
+print(Path("sample.txt").suffixes)  
+# Returns all suffixes/extensions as a list.
+print(Path("folder/sample.txt").parent)  
+# Returns the parent folder of the file.
+print(Path("folder") / "sample.txt")  
+# Joins folder and file path using / operator.
+print(Path("folder/sample.txt").parts)  
+# Returns path parts as a tuple.
+print(Path("sample.txt").exists())  
+# Checks whether the file exists.
+print(Path("sample.txt").is_file())  
+# Checks whether the path is a file.
+print(Path("my_folder").is_dir())  
+# Checks whether the path is a directory.
+print(Path("sample.txt").absolute())  
+# Returns the absolute path.
+print(Path("sample.txt").resolve())  
+# Returns the resolved absolute path.
+print(Path("sample.txt").with_name("new.txt"))  
+# Changes the file name.
+print(Path("sample.txt").with_suffix(".csv"))  
+# Changes the file extension.
+print(Path("folder/sample.txt").relative_to("folder"))  
+# Returns the relative path from the given folder.
+print(list(Path(".").iterdir()))  
+# Lists all items in the current directory.
+print(list(Path(".").glob("*.txt")))  
+# Finds all .txt files in the current directory.
+print(list(Path(".").rglob("*.py")))  
+# Finds all .py files recursively.
+# Make sure sample.txt exists before reading
+Path("sample.txt").touch()
+print(Path("sample.txt").read_text())  
+# Reads file content as text.
+print(Path("sample.txt").read_bytes())  
+# Reads file content as bytes.
+print(Path("output.txt").write_text("Hello"))  
+# Writes text into a file.
+print(Path("output.bin").write_bytes(b"ABC"))  
+# Writes bytes into a binary file.
+Path("new_folder").mkdir(exist_ok=True)
+print("Folder created")
+# Creates a new directory.
+print(Path("output.txt").rename("renamed.txt"))  
+# Renames the file.
+Path("renamed.txt").unlink(missing_ok=True)
+print("File deleted")
+# Deletes the file.
+Path("new_folder").rmdir()
+print("Folder removed")
+# Removes an empty directory.
+print(Path("sample.txt").stat())  
+# Returns file information like size and timestamps.
+print(Path("sample.txt").touch())  
+# Creates the file if it does not exist.
