@@ -228,50 +228,6 @@ for group in groups:
 2 == 0]
 print(result)'''
 
-
-##########TIME#################
-import time
-
-print(time.time())                            # Current Unix timestamp
-print(time.ctime())                           # Current date and time as a string
-print(time.ctime(0))                          # Thu Jan  1 05:30:00 1970 (depending on timezone)
-print(time.asctime())                         # Current date and time as a string
-print(time.localtime())                       # Current local time as struct_time
-print(time.gmtime())                          # Current UTC time as struct_time
-
-print(time.localtime().tm_year)               # Current year
-print(time.localtime().tm_mon)                # Current month
-print(time.localtime().tm_mday)               # Current day
-print(time.localtime().tm_hour)               # Current hour
-print(time.localtime().tm_min)                # Current minute
-print(time.localtime().tm_sec)                # Current second
-
-print(time.strftime("%Y-%m-%d"))              # Current date in YYYY-MM-DD format
-print(time.strftime("%d/%m/%Y"))              # Current date in DD/MM/YYYY format
-print(time.strftime("%I:%M:%S %p"))           # Current time in 12-hour format
-print(time.strftime("%A"))                    # Current weekday name
-print(time.strftime("%B"))                    # Current month name
-
-print(time.strptime("2026-05-16", "%Y-%m-%d"))  # Convert string to struct_time
-print(time.mktime((2026, 5, 16, 10, 30, 0, 0, 0, -1)))  # Convert tuple to timestamp
-
-print(time.perf_counter())                    # High-resolution performance timer
-print(time.process_time())                    # CPU processing time
-print(time.monotonic())                       # Monotonic clock value
-print(time.thread_time())                     # CPU time used by current thread
-
-print(time.get_clock_info("time"))            # Information about time()
-print(time.get_clock_info("perf_counter"))    # Information about perf_counter()
-
-print(time.tzname)                            # Local timezone names
-print(time.timezone)                          # Offset from UTC in seconds
-print(time.altzone)                           # DST offset from UTC in seconds
-print(time.daylight)                          # 1 if DST is defined, else 0
-
-print(time.sleep(1))                          # Pauses execution for 1 second (returns None)
-
-
-
 ###########OS#################
 import os
 
