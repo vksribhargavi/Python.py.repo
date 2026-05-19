@@ -184,7 +184,7 @@ print(time.sleep(1)) # Pauses execution for 1 second (returns None)
 '''
 
 
-from pathlib import Path
+'''from pathlib import Path
 print(Path("sample.txt"))  
 # Creates a path object for the file "sample.txt".
 print(Path.cwd())  
@@ -251,4 +251,54 @@ print("Folder removed")
 print(Path("sample.txt").stat())  
 # Returns file information like size and timestamps.
 print(Path("sample.txt").touch())  
-# Creates the file if it does not exist.
+# Creates the file if it does not exist.'''
+
+import operator
+print(operator.add(10, 5))                   
+print(operator.sub(10, 5))                  
+print(operator.mul(10, 5))                   
+print(operator.truediv(10, 5))               
+print(operator.floordiv(10, 3))              
+print(operator.mod(10, 3))                   
+print(operator.pow(2, 3))                    
+
+print(operator.neg(10))                      
+print(operator.pos(-10))                     
+print(operator.abs(-10))                     
+print(operator.invert(5))                    
+
+print(operator.eq(10, 10))                   
+print(operator.ne(10, 5))                    
+print(operator.gt(10, 5))                    
+print(operator.ge(10, 10))                   
+print(operator.lt(5, 10))                    
+print(operator.le(5, 5))                     
+
+print(operator.and_(6, 3))                   
+print(operator.or_(6, 3))                    
+print(operator.xor(6, 3))                    
+print(operator.lshift(5, 1))                 
+print(operator.rshift(5, 1))                 
+print(operator.concat("Hello ", "Python"))  
+print(operator.contains([10, 20, 30], 20))   
+print(operator.countOf([1, 2, 2, 3], 2))     
+print(operator.indexOf([10, 20, 30], 20))    
+print(operator.getitem([10, 20, 30], 1))     
+print(operator.setitem([1, 2, 3], 1, 99))    
+print(operator.delitem([1, 2, 3], 1))        
+print(operator.itemgetter(1)(["A", "B", "C"]))  
+person = {"name": "Rajesh", "age": 30}
+print(operator.itemgetter("name")(person))   
+
+class Employee:
+    def __init__(self):
+        self.name = "Rajesh"
+        self.salary = 50000
+print(operator.attrgetter("name")(Employee()))  
+print(operator.attrgetter("salary")(Employee())) 
+print(operator.methodcaller("upper")("python"))  
+print(operator.truth([1, 2, 3]))            
+print(operator.not_([]))                    
+print(operator.is_(None, None))              
+print(operator.is_not(10, 20))               
+
